@@ -4,7 +4,7 @@ class Wechat::StoresController < Wechat::ApplicationController
     @stores = Store.all
   end
 
-  def 
+  def show
     @store = Store.find(params[:id])
   end
 
