@@ -1,14 +1,21 @@
 default: &default
+  corpid: "corpid"
+  corpsecret: "corpsecret"
+  agentid:  1
 # Or if using public account, only need above two line
-  appid: "wxe20509277df2c47b"
-  secret: "de03161aa16f978dd9c3f85fb328a02a"
-  token:  "laida_app_token"
+  appid: "wxdeea78e982240182"
+  secret: "265690c3a0f8d9c41f1b526532bc3455"
+  token:    "laida_app_token"
   access_token: "/var/tmp/wechat_access_token"
-  encoding_aes_key:  "yvuWyY4nWBBkkhRdMbiffjik7rwaS5sXLQJYOzgrJPL"
+  encoding_aes_key:  "encoding_aes_key"
 
 production:
-  appid:      
-  secret:     
+  corpid:     <%= ENV['WECHAT_CORPID'] %>
+  corpsecret: <%= ENV['WECHAT_CORPSECRET'] %>
+  agentid:    <%= ENV['WECHAT_AGENTID'] %>
+# Or if using public account, only need above two line
+#  appid:      
+#  secret:     
   token:      <%= ENV['WECHAT_TOKEN'] %>
   access_token:  <%= ENV['WECHAT_ACCESS_TOKEN'] %>
   encoding_aes_key:  <%= ENV['WECHAT_ENCODING_AES_KEY'] %>

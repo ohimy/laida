@@ -8,9 +8,8 @@ Rails.application.routes.draw do
   get '/signout' => 'sessions#destroy', :as => :signout
   get '/auth/failure' => 'sessions#failure'
 
-  resource :weixins, only: [:show, :create]
-
   namespace :wechat do
+    resource :connection, only: [:show, :create]
   	resources :stores
   end
 end
