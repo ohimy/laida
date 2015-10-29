@@ -90,7 +90,7 @@ task :deploy => :environment do
     invoke :'rails:db_migrate'
     invoke :'rails:assets_precompile'
     invoke :'deploy:cleanup'
-    queue "cd #{deploy_to}/#{current_path} && RAILS_ENV=production bundle exec puma -C config/puma.rb"
+    #queue "cd #{deploy_to}/#{current_path} && RAILS_ENV=production bundle exec puma -C config/puma.rb"
 
     to :launch do
       queue "mkdir -p #{deploy_to}/#{current_path}/tmp/"
