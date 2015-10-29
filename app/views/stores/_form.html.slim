@@ -1,0 +1,22 @@
+= simple_form_for @store, :html => { :class => "form-horizontal" } do |f|
+  = f.input :name
+  = error_span(@store[:name])
+  = f.input :logo
+  = error_span(@store[:logo])
+  = f.input :star
+  = error_span(@store[:star])
+  = f.input :state
+  = error_span(@store[:state])
+  = f.input :remarks
+  = error_span(@store[:remarks])
+  = f.input :amounts_to_send
+  = error_span(@store[:amounts_to_send])
+  = f.input :time_to_send
+  = error_span(@store[:time_to_send])
+  = f.input :shop_hours
+  = error_span(@store[:shop_hours])
+  = f.input :license
+  = error_span(@store[:license])
+  = f.button :submit, :class => 'btn-primary'
+  '
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), stores_path, :class => 'btn btn-default'

@@ -1,0 +1,20 @@
+default: &default
+# Or if using public account, only need above two line
+  appid: "wxe20509277df2c47b"
+  secret: "de03161aa16f978dd9c3f85fb328a02a"
+  token:  "laida_app_token"
+  access_token: "/var/tmp/wechat_access_token"
+  encoding_aes_key:  "yvuWyY4nWBBkkhRdMbiffjik7rwaS5sXLQJYOzgrJPL"
+
+production:
+  appid:      
+  secret:     
+  token:      <%= ENV['WECHAT_TOKEN'] %>
+  access_token:  <%= ENV['WECHAT_ACCESS_TOKEN'] %>
+  encoding_aes_key:  <%= ENV['WECHAT_ENCODING_AES_KEY'] %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
